@@ -1,7 +1,7 @@
 {
-  "name": "popover-dropdown",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "@carbonaut/popover-dropdown",
+  "version": "0.0.2",
+  "description": "Generic popover dropdown menu made by Carbonaut.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -12,7 +12,7 @@
   "unpkg": "dist/popover-dropdown/popover-dropdown.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/carbonaut/popover-dropdown.git"
   },
   "files": [
     "dist/",

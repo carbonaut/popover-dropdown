@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property          | Attribute          | Description | Type         | Default     |
-| ----------------- | ------------------ | ----------- | ------------ | ----------- |
-| `currentLanguage` | `current-language` |             | `string`     | `undefined` |
-| `languages`       | --                 |             | `Language[]` | `undefined` |
+| Property        | Attribute        | Description | Type       | Default     |
+| --------------- | ---------------- | ----------- | ---------- | ----------- |
+| `currentOption` | `current-option` |             | `string`   | `undefined` |
+| `options`       | --               |             | `Option[]` | `undefined` |
 
 
 ----------------------------------------------
