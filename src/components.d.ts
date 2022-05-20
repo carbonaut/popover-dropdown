@@ -5,38 +5,38 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Language } from "./components/language-toggle/language-toggle";
+import { Option } from "./components/popover-dropdown/popover-dropdown";
 export namespace Components {
-    interface LanguageToggle {
-        "currentLanguage": string;
-        "languages": Language[];
+    interface PopoverDropdown {
+        "currentOption": string;
+        "options": Option[];
     }
 }
 declare global {
-    interface HTMLLanguageToggleElement extends Components.LanguageToggle, HTMLStencilElement {
+    interface HTMLPopoverDropdownElement extends Components.PopoverDropdown, HTMLStencilElement {
     }
-    var HTMLLanguageToggleElement: {
-        prototype: HTMLLanguageToggleElement;
-        new (): HTMLLanguageToggleElement;
+    var HTMLPopoverDropdownElement: {
+        prototype: HTMLPopoverDropdownElement;
+        new (): HTMLPopoverDropdownElement;
     };
     interface HTMLElementTagNameMap {
-        "language-toggle": HTMLLanguageToggleElement;
+        "popover-dropdown": HTMLPopoverDropdownElement;
     }
 }
 declare namespace LocalJSX {
-    interface LanguageToggle {
-        "currentLanguage"?: string;
-        "languages"?: Language[];
+    interface PopoverDropdown {
+        "currentOption"?: string;
+        "options"?: Option[];
     }
     interface IntrinsicElements {
-        "language-toggle": LanguageToggle;
+        "popover-dropdown": PopoverDropdown;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "language-toggle": LocalJSX.LanguageToggle & JSXBase.HTMLAttributes<HTMLLanguageToggleElement>;
+            "popover-dropdown": LocalJSX.PopoverDropdown & JSXBase.HTMLAttributes<HTMLPopoverDropdownElement>;
         }
     }
 }

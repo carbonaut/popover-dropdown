@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'language-toggle',
+  namespace: 'popover-dropdown',
   outputTargets: [
     {
       type: 'dist',

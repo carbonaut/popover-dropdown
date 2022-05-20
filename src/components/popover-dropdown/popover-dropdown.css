@@ -1,0 +1,42 @@
+:host {
+  cursor: pointer;
+
+  display: block;
+  max-width: fit-content;  
+}
+
+.e-option__description {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  margin: 0;
+}
+
+.e-option__tooltip {
+  position: relative;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.e-option__tooltip::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: -11px;
+  background: white;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #e8e8e8 transparent;
+}
+
+.e-option__tooltip-item {
+  font-size: 16px;
+  padding: 16px;
+}
+
+.e-option__tooltip-item:hover {
+  background-color: #e8e8e8;
+}

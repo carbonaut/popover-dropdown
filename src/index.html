@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/language-toggle.esm.js"></script>
-    <script nomodule src="/build/language-toggle.js"></script>
+    <script type="module" src="/build/popover-dropdown.esm.js"></script>
+    <script nomodule src="/build/popover-dropdown.js"></script>
   </head>
-  <body>
-     <language-toggle></language-toggle>
+  <body style="height: 100vh; margin: auto;">
+     <popover-dropdown></popover-dropdown>
   <script>
-    const languageToggle = document.querySelector('language-toggle');
-    languageToggle.currentLanguage = 'Deutsch';
-    languageToggle.languages = [
+    const languageToggle = document.querySelector('popover-dropdown');
+    languageToggle.currentOption = 'Deutsch';
+    languageToggle.options = [
       {label: 'Deutsch', callback: () => {}},
       {label: 'English', callback: () => {}}, 
       {label: 'Español', callback: () => {}}
