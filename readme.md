@@ -4,11 +4,20 @@
 
 This is a web-component built with Stencil that presents a custom popover that can receive a any callback functions that will be triggered on click.
 
-![Example](https://s8.gifyu.com/images/example0d84f30c85c12e23.gif)
+![Example](https://github.com/carbonaut/popover-dropdown/tree/main/assets/img/example.gif)
 
 ## Getting Started
 
 To get our component up and running on your app, follow the steps for your framework (or Vanilla JS):
+
+**For Vanilla JS:**
+
+Just add the module on a `script` tag inside your `head` tag:
+
+```
+<script type='module' src='https://unpkg.com/@carbonaut/popover-dropdown@0.0.2/dist/popover-dropdown/popover-dropdown.esm.js'></script>
+</head>
+```
 
 # Stencil
 
