@@ -4,20 +4,108 @@
 
 This is a web-component built with Stencil that presents a custom popover that can receive a any callback functions that will be triggered on click.
 
-![Example](https://github.com/carbonaut/popover-dropdown/tree/main/assets/img/example.gif)
+![Example](https://github.com/carbonaut/popover-dropdown/blob/main/assets/img/example.gif)
+
+## Install
+
+```bash
+    npm i @carbonaut/popover-dropdown --save
+```
 
 ## Getting Started
 
 To get our component up and running on your app, follow the steps for your framework (or Vanilla JS):
 
-**For Vanilla JS:**
+**Vanilla JS:**
 
-Just add the module on a `script` tag inside your `head` tag:
+1. Add the package's module on a `script` tag inside your `head` tag in your `index.html` file:
 
 ```
 <script type='module' src='https://unpkg.com/@carbonaut/popover-dropdown@0.0.2/dist/popover-dropdown/popover-dropdown.esm.js'></script>
 </head>
 ```
+
+2. Apply the component to html and then attach the options attibutes to the component using JavaScript:
+
+_HTML_
+
+```html
+<popover-dropdown></popover-dropdown>
+```
+
+_JavaScript_
+
+```js
+const popoverDropdown = document.querySelector('popover-dropdown');
+popoverDropdown.currentOption = 'Deutsch';
+popoverDropdown.options = [
+  { label: 'Deutsch', callback: () => {} },
+  { label: 'English', callback: () => {} },
+  { label: 'Español', callback: () => {} },
+];
+```
+
+**Angular**
+
+1. Add `defineCustomElements` function to your `main.ts` file:
+
+```ts
+import { defineCustomElements } from '@carbonaut/popover-dropdown/loader';
+
+defineCustomElements(window);
+```
+
+2. On the `module.ts` file you're going to use the component add `CUSTOM_ELEMENTS_SCHEMA` to your schema configuration
+
+```ts
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
+@NgModule({
+  imports: [
+    ...
+  ],
+  declarations: [...],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+```
+
+3. Use the component on your HTML template page and attach the option properties through your `.ts` file;
+
+your-page.page.html
+
+```html
+<popover-dropdown [options]="options" [currentOption]="firstOption"></popover-dropdown>
+```
+
+your-page.page.ts
+
+```ts
+export class ExamplePage {
+  options = [
+    { label: 'Deutsch', callback: () => {} },
+    { label: 'English', callback: () => {} },
+    { label: 'Español', callback: () => {} },
+  ];
+
+  firstOption: string = 'Deutsch';
+```
+
+## Types and attributes
+
+```ts
+option: {
+  label: string;
+  callback: () => {};
+}
+
+currentOption: string;
+```
+
+| Property         | Description                                                                                                                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `options`        | `Option[]` Array of objects that contains a `label` property of type `string` and a `callback` property that can be any function you want to be triggered when the option is selected.                                        |
+| `current-option` | `string` The option you want to have displayed when you first open the component, this property must match with a label from the `options` property, otherwise it will be replaced by the first label on the `options` array. |
 
 # Stencil
 
