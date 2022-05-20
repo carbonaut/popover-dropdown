@@ -1,7 +1,9 @@
 {
   "name": "@carbonaut/popover-dropdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generic popover dropdown menu made by Carbonaut.",
+  "author": "Carbonaut",
+  "homepage": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
