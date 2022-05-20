@@ -2,14 +2,14 @@
 
 # Popover Dropdown
 
-This is a web-component built with Stencil that presents a custom popover that can receive a any callback functions that will be triggered on click.
+This is a web-component built with Stencil that presents a custom popover that can receive a any callback functions that will be called on click.
 
 ![Example](https://github.com/carbonaut/popover-dropdown/blob/main/assets/img/example.gif)
 
 ## Install
 
 ```bash
-    npm i @carbonaut/popover-dropdown --save
+npm i @carbonaut/popover-dropdown --save
 ```
 
 ## Getting Started
@@ -107,7 +107,7 @@ currentOption: string;
 | `options`        | `Option[]` Array of objects that contains a `label` property of type `string` and a `callback` property that can be any function you want to be triggered when the option is selected.                                        |
 | `current-option` | `string` The option you want to have displayed when you first open the component, this property must match with a label from the `options` property, otherwise it will be replaced by the first label on the `options` array. |
 
-# Stencil
+# This package was built utilizing Stencil.js
 
 Stencil is a compiler for building fast web apps using Web Components.
 
