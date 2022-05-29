@@ -6,16 +6,29 @@
 }
 
 .e-option__description {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   font-weight: bold;
   padding: 16px;
   margin: 0;
+  z-index: 10;
+}
+
+.e-option__icon {
+  font-size: 24px;
+  margin-left: 6px;
 }
 
 .e-option__tooltip {
   position: relative;
   border: 1px solid #e8e8e8;
   border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 .e-option__tooltip::before {
@@ -23,20 +36,45 @@
   display: block;
   position: absolute;
   right: 50%;
-  top: -11px;
-  background: white;
+  top: -12px;
+  height: 0px;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -6px;
+  border-width: 6px;
   border-style: solid;
   border-color: transparent transparent #e8e8e8 transparent;
 }
 
+.e-option__tooltip::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: -11px;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.e-option__backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: 9;
+}
+
 .e-option__tooltip-item {
   font-size: 16px;
-  padding: 16px;
+  padding: 6px 8px 6px 16px;
+  border-radius: 4px;
+  text-align: right;
 }
 
 .e-option__tooltip-item:hover {
-  background-color: #e8e8e8;
+  background-color: #faf8fd;
 }
