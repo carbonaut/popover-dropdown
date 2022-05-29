@@ -37,7 +37,8 @@ _JavaScript_
 
 ```js
 const popoverDropdown = document.querySelector('popover-dropdown');
-popoverDropdown.currentOption = 'Deutsch';
+popoverDropdown.firstOption = 'Deutsch';
+popoverDropdown.icon = 'globe-outline';
 popoverDropdown.options = [
   { label: 'Deutsch', callback: () => {} },
   { label: 'English', callback: () => {} },
@@ -75,18 +76,20 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 your-page.page.html
 
 ```html
-<popover-dropdown [options]="options" [currentOption]="firstOption"></popover-dropdown>
+<popover-dropdown [options]="options" [firstOption]="firstOption" [icon]="icon"></popover-dropdown>
 ```
 
 your-page.page.ts
 
 ```ts
 export class ExamplePage {
-  options = [
+  options: Option[] = [
     { label: 'Deutsch', callback: () => {} },
     { label: 'English', callback: () => {} },
     { label: 'Español', callback: () => {} },
   ];
+
+  icon: string = 'globe-outline';
 
   firstOption: string = 'Deutsch';
 ```
@@ -99,13 +102,20 @@ option: {
   callback: () => {};
 }
 
-currentOption: string;
+firstOption: string;
 ```
 
-| Property         | Description                                                                                                                                                                                                                   |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `options`        | `Option[]` Array of objects that contains a `label` property of type `string` and a `callback` property that can be any function you want to be triggered when the option is selected.                                        |
-| `current-option` | `string` The option you want to have displayed when you first open the component, this property must match with a label from the `options` property, otherwise it will be replaced by the first label on the `options` array. |
+## Properties
+
+| Property      | Attribute      | Description                                                                                 | Type       | Default     |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------- | ---------- | ----------- |
+| `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array.  | `string`   | `undefined` |
+| `icon`        | `icon`         | The icon displayed at the right side of the popover description. It uses ionicons v6 icons. | `string`   | `undefined` |
+| `options`     | `options`      | The options list of the popover.                                                            | `Option[]` | `undefined` |
+
+### Depends on
+
+- ion-icon
 
 # This package was built utilizing Stencil.js
 
