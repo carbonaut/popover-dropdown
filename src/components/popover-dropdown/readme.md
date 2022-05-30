@@ -21,7 +21,7 @@ To get our component up and running on your app, follow the steps for your frame
 1. Add the package's module on a `script` tag inside your `head` tag in your `index.html` file:
 
 ```
-<script type='module' src='https://unpkg.com/@carbonaut/popover-dropdown@0.0.2/dist/popover-dropdown/popover-dropdown.esm.js'></script>
+<script type='module' src='https://unpkg.com/@carbonaut/popover-dropdown@latest/dist/popover-dropdown/popover-dropdown.esm.js'></script>
 </head>
 ```
 
