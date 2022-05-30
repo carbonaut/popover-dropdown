@@ -1,1 +1,1 @@
-../src/components/popover-dropdown/readme.md
+./src/components/popover-dropdown/readme.md
