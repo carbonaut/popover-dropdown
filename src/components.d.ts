@@ -8,7 +8,20 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Option } from "./components/popover-dropdown/popover-dropdown";
 export namespace Components {
     interface PopoverDropdown {
-        "currentOption": string;
+        /**
+          * The first option to be displayed, if it's empty it'll show the first one on options array.
+          * @type {string}
+         */
+        "firstOption": string;
+        /**
+          * The icon displayed at the right side of the popover description. It uses ionicons v6 icons.
+          * @type {string}
+         */
+        "icon": string;
+        /**
+          * The options list of the popover.
+          * @type {Option[]}
+         */
         "options": Option[];
     }
 }
@@ -25,7 +38,20 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PopoverDropdown {
-        "currentOption"?: string;
+        /**
+          * The first option to be displayed, if it's empty it'll show the first one on options array.
+          * @type {string}
+         */
+        "firstOption"?: string;
+        /**
+          * The icon displayed at the right side of the popover description. It uses ionicons v6 icons.
+          * @type {string}
+         */
+        "icon"?: string;
+        /**
+          * The options list of the popover.
+          * @type {Option[]}
+         */
         "options"?: Option[];
     }
     interface IntrinsicElements {
