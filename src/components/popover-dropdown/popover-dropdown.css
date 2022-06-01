@@ -3,6 +3,7 @@
 
   display: block;
   max-width: fit-content;  
+  position: relative;
 }
 
 .e-option__description {
@@ -10,7 +11,6 @@
   align-items: center;
   font-size: 16px;
   font-weight: bold;
-  padding: 16px;
   margin: 0;
   z-index: 10;
 }
@@ -21,14 +21,16 @@
 }
 
 .e-option__tooltip {
-  position: relative;
+  position: absolute;
   border: 1px solid #e8e8e8;
-  border-radius: 8px;
+  top: 36px;
+  border-radius: 4px;
   padding: 8px;
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.08);
   z-index: 10;
   max-width: fit-content;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .e-option__tooltip::before {
@@ -36,11 +38,11 @@
   display: block;
   position: absolute;
   right: 50%;
-  top: -12px;
+  top: -24px;
   height: 0px;
   left: 50%;
-  margin-left: -6px;
-  border-width: 6px;
+  margin-left: -12px;
+  border-width: 12px;
   border-style: solid;
   border-color: transparent transparent #e8e8e8 transparent;
 }
@@ -50,10 +52,10 @@
   display: block;
   position: absolute;
   right: 50%;
-  top: -11px;
+  top: -23px;
   left: 50%;
-  margin-left: -6px;
-  border-width: 6px;
+  margin-left: -12px;
+  border-width: 12px;
   border-style: solid;
   border-color: transparent transparent white transparent;
 }

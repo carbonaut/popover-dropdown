@@ -54,7 +54,7 @@ export class PopoverDropdown {
     this.isOpened = !this.isOpened;
   }
 
-  changeOption(label: string, callback: () => any) {
+  changeOption(label: string, callback: any) {
     this.selectedOption = label;
     this.isOpened = false;
 
