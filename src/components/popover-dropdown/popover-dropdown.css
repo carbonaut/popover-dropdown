@@ -4,6 +4,9 @@
   display: block;
   max-width: fit-content;  
   position: relative;
+
+  --text-color: #111122;
+  --highlight-color: #111122;
 }
 
 .e-option__description {
@@ -13,6 +16,15 @@
   font-weight: bold;
   margin: 0;
   z-index: 10;
+  color: var(--text-color);
+}
+
+.e-option__description--active {
+  color: var(--highlight-color)
+}
+
+.e-option__description:hover {
+  color: var(--highlight-color)
 }
 
 .e-option__icon {
@@ -71,6 +83,7 @@
 }
 
 .e-option__tooltip-item {
+  color: var(--text-color);
   font-size: 16px;
   padding: 6px 8px 6px 16px;
   border-radius: 4px;
@@ -78,5 +91,6 @@
 }
 
 .e-option__tooltip-item:hover {
+  color: var(--highlight-color);
   background-color: #faf8fd;
 }
