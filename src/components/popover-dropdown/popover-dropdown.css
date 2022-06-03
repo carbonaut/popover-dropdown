@@ -7,15 +7,16 @@
 
   --text-color: #111122;
   --highlight-color: #111122;
+  --title-weight: 700;
 }
 
 .e-option__description {
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: var(--title-weight);
   margin: 0;
-  z-index: 10;
+  z-index: 10;  
   color: var(--text-color);
 }
 
