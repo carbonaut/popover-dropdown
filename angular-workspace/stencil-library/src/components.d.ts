@@ -5,6 +5,9 @@ import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import { Components } from 'popover-dropdown';
 
+
+
+
 export declare interface IonIcon extends Components.IonIcon {}
 
 @ProxyCmp({
