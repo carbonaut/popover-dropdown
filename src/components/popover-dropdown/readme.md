@@ -119,6 +119,7 @@ firstOption: string;
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute      | Description                                                                                 | Type       | Default     |
@@ -127,6 +128,7 @@ firstOption: string;
 | `icon`        | `icon`         | The icon displayed at the right side of the popover description. It uses ionicons v6 icons. | `string`   | `undefined` |
 | `options`     | --             | The options list of the popover.                                                            | `Option[]` | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -134,13 +136,12 @@ firstOption: string;
 - ion-icon
 
 ### Graph
-
 ```mermaid
 graph TD;
   popover-dropdown --> ion-icon
   style popover-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
