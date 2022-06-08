@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
-import { DIRECTIVES } from './stencil-generated';
+import { defineCustomElements } from '@carbonaut/popover-dropdown/loader';
+
+import { PopoverDropdown } from './stencil-generated/components';
+
+defineCustomElements(window);
 
 @NgModule({
-  declarations: [...DIRECTIVES],
-  exports: [...DIRECTIVES],
+  imports: [],
+  exports: [PopoverDropdown],
+  declarations: [PopoverDropdown],
 })
-export class PopoverDropdownModule {}
+export class WebComponentsModule {}
