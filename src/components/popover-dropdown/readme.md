@@ -128,6 +128,7 @@ firstOption: string;
 | `icon`        | `icon`         | The icon displayed at the right side of the popover description. It uses ionicons v6 icons.                 | `string`   | `undefined` |
 | `options`     | --             | The options list of the popover.                                                                            | `Option[]` | `undefined` |
 | `svg`         | `svg`          | The icon displayed at the right side of the popover description, it'll substitute the icon property if set. | `string`   | `undefined` |
+| `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.                     | `boolean`  | `false`     |
 
 
 ## Dependencies

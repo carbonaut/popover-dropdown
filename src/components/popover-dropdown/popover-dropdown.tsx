@@ -35,6 +35,12 @@ export class PopoverDropdown {
    */
   @Prop() svg: string = undefined;
 
+  /**
+   * Boolean property to set the popover dropdown to be displayed on top of the description.
+   * @type {boolean}
+   */
+  @Prop() upwards: boolean = false;
+
   @State() selectedOption: string = undefined;
 
   @State() isOpened: boolean = false;
@@ -77,7 +83,7 @@ export class PopoverDropdown {
           {this.svg ? <img class="e-option__svg" src={this.svg} /> : ''}
         </p>
         {this.isOpened ? (
-          <div class="e-option__tooltip">
+          <div class={this.upwards ? 'e-option__tooltip e-option__tooltip--upwards' : 'e-option__tooltip'}>
             {this.options.map(item =>
               item.label === this.selectedOption ? (
                 ''

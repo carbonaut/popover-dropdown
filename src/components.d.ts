@@ -28,6 +28,11 @@ export namespace Components {
           * @type {string}
          */
         "svg": string;
+        /**
+          * Boolean property to set the popover dropdown to be displayed on top of the description.
+          * @type {boolean}
+         */
+        "upwards": boolean;
     }
 }
 declare global {
@@ -63,6 +68,11 @@ declare namespace LocalJSX {
           * @type {string}
          */
         "svg"?: string;
+        /**
+          * Boolean property to set the popover dropdown to be displayed on top of the description.
+          * @type {boolean}
+         */
+        "upwards"?: boolean;
     }
     interface IntrinsicElements {
         "popover-dropdown": PopoverDropdown;

@@ -52,6 +52,12 @@
   background-color: #ffffff;
 }
 
+.e-option__tooltip--upwards {
+  top: unset;
+  bottom: 36px;
+  box-shadow: 0 -6px 6px 0px rgb(0 0 0 / 8%);
+}
+
 .e-option__tooltip::before {
   content: '';
   display: block;
@@ -77,6 +83,18 @@
   border-width: 12px;
   border-style: solid;
   border-color: transparent transparent white transparent;
+}
+
+.e-option__tooltip--upwards::before {
+  top: unset;
+  bottom: -24px;
+  border-color: #e8e8e8 transparent transparent transparent;
+}
+
+.e-option__tooltip--upwards::after {
+  top: unset;
+  bottom: -23px;
+  border-color: white transparent transparent transparent;
 }
 
 .e-option__backdrop {

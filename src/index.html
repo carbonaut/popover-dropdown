@@ -8,12 +8,13 @@
     <script type="module" src="/build/popover-dropdown.esm.js"></script>
     <script nomodule src="/build/popover-dropdown.js"></script>
   </head>
-  <body style="height: 100vh; margin: auto;">
+  <body style="height: 100vh; margin: auto; display: flex; align-items: center; justify-content: center;">
      <popover-dropdown></popover-dropdown>
   <script>
     const languageToggle = document.querySelector('popover-dropdown');
     languageToggle.icon = 'globe-outline';
     languageToggle.svg = 'assets/img/globe.svg';
+    languageToggle.upwards = true;
     languageToggle.options = [
       {label: 'Deutsch', callback: () => {}},
       {label: 'English', callback: () => {}}, 
