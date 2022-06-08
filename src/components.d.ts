@@ -23,6 +23,11 @@ export namespace Components {
           * @type {Option[]}
          */
         "options": Option[];
+        /**
+          * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
+          * @type {string}
+         */
+        "svg": string;
     }
 }
 declare global {
@@ -53,6 +58,11 @@ declare namespace LocalJSX {
           * @type {Option[]}
          */
         "options"?: Option[];
+        /**
+          * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
+          * @type {string}
+         */
+        "svg"?: string;
     }
     interface IntrinsicElements {
         "popover-dropdown": PopoverDropdown;

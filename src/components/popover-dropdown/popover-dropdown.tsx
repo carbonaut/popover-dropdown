@@ -29,6 +29,12 @@ export class PopoverDropdown {
    */
   @Prop() icon: string = undefined;
 
+  /**
+   * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
+   * @type {string}
+   */
+  @Prop() svg: string = undefined;
+
   @State() selectedOption: string = undefined;
 
   @State() isOpened: boolean = false;
@@ -67,7 +73,8 @@ export class PopoverDropdown {
         {this.isOpened ? <div class="e-option__backdrop" onClick={() => this.open()}></div> : ''}
         <p class={this.isOpened ? 'e-option__description e-option__description--active' : 'e-option__description'} onClick={() => this.open()}>
           {this.selectedOption}
-          {this.icon ? <ion-icon class="e-option__icon" name={this.icon}></ion-icon> : ''}
+          {this.icon && !this.svg ? <ion-icon class="e-option__icon" name={this.icon}></ion-icon> : ''}
+          {this.svg ? <img class="e-option__svg" src={this.svg} /> : ''}
         </p>
         {this.isOpened ? (
           <div class="e-option__tooltip">
