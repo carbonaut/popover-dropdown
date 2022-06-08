@@ -28,12 +28,12 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0",
-    "ionicons": "^6.0.1"
+    "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
     "@stencil/angular-output-target": "^0.4.0",
     "@types/jest": "^27.0.3",
+    "ionicons": "^6.0.2",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"

@@ -5,9 +5,9 @@ export const config: Config = {
   namespace: 'popover-dropdown',
   outputTargets: [
     angularOutputTarget({
-      componentCorePackage: 'popover-dropdown',
-      directivesProxyFile: './angular-workspace/stencil-library/src/components.d.ts',
-      directivesArrayFile: './angular-workspace/stencil-library/src/index.ts'
+      componentCorePackage: '@carbonaut/popover-dropdown',
+      directivesProxyFile: '../angular-workspace/projects/popover-dropdown/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../angular-workspace/projects/popover-dropdown/src/lib/stencil-generated/index.d.ts',
     }),
     {
       type: 'dist',
