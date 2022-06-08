@@ -1,5 +1,5 @@
 
-import * as d from './components.d';
+import * as d from './components';
 
 export const DIRECTIVES = [
   d.IonIcon,

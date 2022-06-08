@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-component-library',
+  selector: 'lib-popover-dropdown',
   template: `
     <p>
-      component-library works!
+      popover-dropdown works!
     </p>
   `,
   styles: [
   ]
 })
-export class ComponentLibraryComponent implements OnInit {
+export class PopoverDropdownComponent implements OnInit {
 
   constructor() { }
 

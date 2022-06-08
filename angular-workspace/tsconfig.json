@@ -6,6 +6,9 @@
     "paths": {
       "component-library": [
         "dist/component-library"
+      ],
+      "popover-dropdown": [
+        "dist/popover-dropdown"
       ]
     },
     "outDir": "./dist/out-tsc",
