@@ -10,18 +10,22 @@
   --title-weight: 700;
 }
 
-.e-option__description {
+.e-option__container {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: var(--title-weight);
-  margin: 0;
   z-index: 10;  
   color: var(--text-color);
 }
 
-.e-option__description--active {
+.e-option__container--active {
   color: var(--highlight-color)
+}
+
+.e-option__description {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: var(--title-weight);
+  margin: 0;
 }
 
 .e-option__description:hover {

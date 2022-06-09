@@ -77,11 +77,11 @@ export class PopoverDropdown {
     return (
       <Host>
         {this.isOpened ? <div class="e-option__backdrop" onClick={() => this.open()}></div> : ''}
-        <p class={this.isOpened ? 'e-option__description e-option__description--active' : 'e-option__description'} onClick={() => this.open()}>
-          {this.selectedOption}
+        <div class={this.isOpened ? 'e-option__container e-option__container--active' : 'e-option__container'} onClick={() => this.open()}>
+          <p class="e-option__description">{this.selectedOption}</p>
           {this.icon && !this.svg ? <ion-icon class="e-option__icon" name={this.icon}></ion-icon> : ''}
           {this.svg ? <img class="e-option__svg" src={this.svg} /> : ''}
-        </p>
+        </div>
         {this.isOpened ? (
           <div class={this.upwards ? 'e-option__tooltip e-option__tooltip--upwards' : 'e-option__tooltip'}>
             {this.options.map(item =>
