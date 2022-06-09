@@ -28,7 +28,7 @@
   margin: 0;
 }
 
-.e-option__description:hover {
+.e-option__container:hover {
   color: var(--highlight-color)
 }
 
