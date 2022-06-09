@@ -114,7 +114,8 @@
 .e-option__tooltip-item {
   color: var(--text-color);
   font-size: 16px;
-  padding: 6px 8px 6px 16px;
+  line-height: 16px;
+  padding: 8px 8px 6px 16px;
   border-radius: 4px;
   text-align: right;
 }
