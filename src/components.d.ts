@@ -14,11 +14,6 @@ export namespace Components {
          */
         "firstOption": string;
         /**
-          * The icon displayed at the right side of the popover description.
-          * @type {string}
-         */
-        "icon": string;
-        /**
           * The options list of the popover.
           * @type {Option[]}
          */
@@ -48,11 +43,6 @@ declare namespace LocalJSX {
           * @type {string}
          */
         "firstOption"?: string;
-        /**
-          * The icon displayed at the right side of the popover description.
-          * @type {string}
-         */
-        "icon"?: string;
         /**
           * The options list of the popover.
           * @type {Option[]}
