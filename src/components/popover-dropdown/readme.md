@@ -38,7 +38,7 @@ _JavaScript_
 ```js
 const popoverDropdown = document.querySelector('popover-dropdown');
 popoverDropdown.firstOption = 'Deutsch';
-popoverDropdown.icon = 'globe-outline';
+popoverDropdown.icon = './assets/img/globe-outline.svg';
 popoverDropdown.options = [
   { label: 'Deutsch', callback: () => {} },
   { label: 'English', callback: () => {} },
@@ -89,7 +89,7 @@ export class ExamplePage {
     { label: 'Español', callback: () => {} },
   ];
 
-  icon: string = 'globe-outline';
+  icon: string = './assets/img/globe-outline.svg';
 
   firstOption: string = 'Deutsch';
 ```
@@ -104,8 +104,6 @@ export class ExamplePage {
 }
 ```
 
-You can
-
 ## Types and attributes
 
 ```ts
@@ -119,31 +117,15 @@ firstOption: string;
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
-| Property      | Attribute      | Description                                                                                                 | Type       | Default     |
-| ------------- | -------------- | ----------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
-| `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array.                  | `string`   | `undefined` |
-| `icon`        | `icon`         | The icon displayed at the right side of the popover description. It uses ionicons v6 icons.                 | `string`   | `undefined` |
-| `options`     | --             | The options list of the popover.                                                                            | `Option[]` | `undefined` |
-| `svg`         | `svg`          | The icon displayed at the right side of the popover description, it'll substitute the icon property if set. | `string`   | `undefined` |
-| `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.                     | `boolean`  | `false`     |
+| Property      | Attribute      | Description                                                                                | Type       | Default     |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------ | ---------- | ----------- |
+| `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array. | `string`   | `undefined` |
+| `icon`        | `icon`         | The icon displayed at the right side of the popover description, must be a valid image.    | `string`   | `undefined` |
+| `options`     | --             | The options list of the popover.                                                           | `Option[]` | `undefined` |
+| `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.    | `boolean`  | `false`     |
 
+---
 
-## Dependencies
-
-### Depends on
-
-- ion-icon
-
-### Graph
-```mermaid
-graph TD;
-  popover-dropdown --> ion-icon
-  style popover-dropdown fill:#f9f,stroke:#333,stroke-width:4px
-```
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
