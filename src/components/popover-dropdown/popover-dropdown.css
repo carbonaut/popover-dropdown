@@ -33,11 +33,6 @@
 }
 
 .e-option__icon {
-  font-size: 24px;
-  margin-left: 6px;
-}
-
-.e-option__svg {
   height: 24px;
   width: auto;
   margin-left: 6px;
