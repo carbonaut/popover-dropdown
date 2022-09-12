@@ -14,20 +14,10 @@ export namespace Components {
          */
         "firstOption": string;
         /**
-          * The icon displayed at the right side of the popover description. It uses ionicons v6 icons.
-          * @type {string}
-         */
-        "icon": string;
-        /**
           * The options list of the popover.
           * @type {Option[]}
          */
         "options": Option[];
-        /**
-          * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
-          * @type {string}
-         */
-        "svg": string;
         /**
           * Boolean property to set the popover dropdown to be displayed on top of the description.
           * @type {boolean}
@@ -54,20 +44,10 @@ declare namespace LocalJSX {
          */
         "firstOption"?: string;
         /**
-          * The icon displayed at the right side of the popover description. It uses ionicons v6 icons.
-          * @type {string}
-         */
-        "icon"?: string;
-        /**
           * The options list of the popover.
           * @type {Option[]}
          */
         "options"?: Option[];
-        /**
-          * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
-          * @type {string}
-         */
-        "svg"?: string;
         /**
           * Boolean property to set the popover dropdown to be displayed on top of the description.
           * @type {boolean}

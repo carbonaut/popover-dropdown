@@ -1,6 +1,6 @@
 {
   "name": "@carbonaut/popover-dropdown",
-  "version": "0.0.69",
+  "version": "0.0.70",
   "description": "Generic popover dropdown menu made by Carbonaut.",
   "author": "Carbonaut",
   "homepage": "",
@@ -33,7 +33,6 @@
   "devDependencies": {
     "@stencil/angular-output-target": "^0.4.0",
     "@types/jest": "^27.0.3",
-    "ionicons": "^6.0.2",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"

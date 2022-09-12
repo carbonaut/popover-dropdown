@@ -9,10 +9,11 @@
     <script nomodule src="/build/popover-dropdown.js"></script>
   </head>
   <body style="height: 100vh; margin: auto; display: flex; align-items: center; justify-content: center;">
-     <popover-dropdown></popover-dropdown>
+     <popover-dropdown>
+        <img style="width: 100%" slot="icon" src="./assets/img/globe-outline.svg" alt="icon">
+     </popover-dropdown>
   <script>
     const languageToggle = document.querySelector('popover-dropdown');
-    languageToggle.icon = 'globe-outline';
     languageToggle.upwards = true;
     languageToggle.options = [
       {label: 'Deutsch', callback: () => {}},

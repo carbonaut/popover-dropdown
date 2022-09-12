@@ -38,7 +38,7 @@ _JavaScript_
 ```js
 const popoverDropdown = document.querySelector('popover-dropdown');
 popoverDropdown.firstOption = 'Deutsch';
-popoverDropdown.icon = 'globe-outline';
+popoverDropdown.icon = './assets/img/globe-outline.svg';
 popoverDropdown.options = [
   { label: 'Deutsch', callback: () => {} },
   { label: 'English', callback: () => {} },
@@ -76,7 +76,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 your-page.page.html
 
 ```html
-<popover-dropdown [options]="options" [firstOption]="firstOption" [icon]="icon"></popover-dropdown>
+<popover-dropdown [options]="options" [firstOption]="firstOption">
+  <img style="width: 100%" slot="icon" src="./assets/img/globe-outline.svg" alt="icon" />
+</popover-dropdown>
 ```
 
 your-page.page.ts
@@ -88,8 +90,6 @@ export class ExamplePage {
     { label: 'English', callback: () => {} },
     { label: 'Español', callback: () => {} },
   ];
-
-  icon: string = 'globe-outline';
 
   firstOption: string = 'Deutsch';
 ```
@@ -103,8 +103,6 @@ export class ExamplePage {
   --title-weight: 700; // font-weight of the title element
 }
 ```
-
-You can
 
 ## Types and attributes
 
@@ -121,27 +119,17 @@ firstOption: string;
 
 ## Properties
 
-| Property      | Attribute      | Description                                                                                                 | Type       | Default     |
-| ------------- | -------------- | ----------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
-| `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array.                  | `string`   | `undefined` |
-| `icon`        | `icon`         | The icon displayed at the right side of the popover description. It uses ionicons v6 icons.                 | `string`   | `undefined` |
-| `options`     | --             | The options list of the popover.                                                                            | `Option[]` | `undefined` |
-| `svg`         | `svg`          | The icon displayed at the right side of the popover description, it'll substitute the icon property if set. | `string`   | `undefined` |
-| `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.                     | `boolean`  | `false`     |
+| Property      | Attribute      | Description                                                                                | Type       | Default     |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------ | ---------- | ----------- |
+| `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array. | `string`   | `undefined` |
+| `options`     | --             | The options list of the popover.                                                           | `Option[]` | `undefined` |
+| `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.    | `boolean`  | `false`     |
 
-## Dependencies
+## Slots
 
-### Depends on
-
-- ion-icon
-
-### Graph
-
-```mermaid
-graph TD;
-  popover-dropdown --> ion-icon
-  style popover-dropdown fill:#f9f,stroke:#333,stroke-width:4px
-```
+| Property | Attribute | Description                                                                      | Type           | Default     |
+| -------- | --------- | -------------------------------------------------------------------------------- | -------------- | ----------- |
+| `icon`   | --        | Image, svg or emoji that can be used as an icon on the label's left (up to 24px) | `HTML Element` | `undefined` |
 
 ---
 

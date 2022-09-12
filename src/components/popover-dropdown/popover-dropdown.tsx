@@ -24,18 +24,6 @@ export class PopoverDropdown {
   @Prop() firstOption: string = undefined;
 
   /**
-   * The icon displayed at the right side of the popover description. It uses ionicons v6 icons.
-   * @type {string}
-   */
-  @Prop() icon: string = undefined;
-
-  /**
-   * The icon displayed at the right side of the popover description, it'll substitute the icon property if set.
-   * @type {string}
-   */
-  @Prop() svg: string = undefined;
-
-  /**
    * Boolean property to set the popover dropdown to be displayed on top of the description.
    * @type {boolean}
    */
@@ -79,8 +67,9 @@ export class PopoverDropdown {
         {this.isOpened ? <div class="e-option__backdrop" onClick={() => this.open()}></div> : ''}
         <div class={this.isOpened ? 'e-option__container e-option__container--active' : 'e-option__container'} onClick={() => this.open()}>
           <p class="e-option__description">{this.selectedOption}</p>
-          {this.icon && !this.svg ? <ion-icon class="e-option__icon" name={this.icon}></ion-icon> : ''}
-          {this.svg ? <img class="e-option__svg" src={this.svg} /> : ''}
+          <div class="e-option__icon">
+            <slot name="icon" />
+          </div>
         </div>
         {this.isOpened ? (
           <div class={this.upwards ? 'e-option__tooltip e-option__tooltip--upwards' : 'e-option__tooltip'}>
