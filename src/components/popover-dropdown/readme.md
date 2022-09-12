@@ -30,7 +30,9 @@ To get our component up and running on your app, follow the steps for your frame
 _HTML_
 
 ```html
-<popover-dropdown></popover-dropdown>
+<popover-dropdown>
+  <img style="width: 100%" slot="icon" src="./assets/img/globe-outline.svg" alt="icon" />
+</popover-dropdown>
 ```
 
 _JavaScript_
@@ -38,7 +40,6 @@ _JavaScript_
 ```js
 const popoverDropdown = document.querySelector('popover-dropdown');
 popoverDropdown.firstOption = 'Deutsch';
-popoverDropdown.icon = './assets/img/globe-outline.svg';
 popoverDropdown.options = [
   { label: 'Deutsch', callback: () => {} },
   { label: 'English', callback: () => {} },
