@@ -30,9 +30,7 @@ To get our component up and running on your app, follow the steps for your frame
 _HTML_
 
 ```html
-<popover-dropdown>
-  <img style="width: 100%" slot="icon" src="./assets/img/globe-outline.svg" alt="icon" />
-</popover-dropdown>
+<popover-dropdown></popover-dropdown>
 ```
 
 _JavaScript_
@@ -40,6 +38,7 @@ _JavaScript_
 ```js
 const popoverDropdown = document.querySelector('popover-dropdown');
 popoverDropdown.firstOption = 'Deutsch';
+popoverDropdown.icon = './assets/img/globe-outline.svg';
 popoverDropdown.options = [
   { label: 'Deutsch', callback: () => {} },
   { label: 'English', callback: () => {} },
@@ -116,7 +115,16 @@ option: {
 firstOption: string;
 ```
 
+## Slots
+
+| Property | Attribute | Description                                                                      | Type           | Default     |
+| -------- | --------- | -------------------------------------------------------------------------------- | -------------- | ----------- |
+| `icon`   | --        | Image, svg or emoji that can be used as an icon on the label's left (up to 24px) | `HTML Element` | `undefined` |
+
+---
+
 <!-- Auto Generated Below -->
+
 
 ## Properties
 
@@ -126,12 +134,7 @@ firstOption: string;
 | `options`     | --             | The options list of the popover.                                                           | `Option[]` | `undefined` |
 | `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.    | `boolean`  | `false`     |
 
-## Slots
 
-| Property | Attribute | Description                                                                      | Type           | Default     |
-| -------- | --------- | -------------------------------------------------------------------------------- | -------------- | ----------- |
-| `icon`   | --        | Image, svg or emoji that can be used as an icon on the label's left (up to 24px) | `HTML Element` | `undefined` |
+----------------------------------------------
 
----
-
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

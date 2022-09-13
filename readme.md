@@ -115,6 +115,14 @@ option: {
 firstOption: string;
 ```
 
+## Slots
+
+| Property | Attribute | Description                                                                      | Type           | Default     |
+| -------- | --------- | -------------------------------------------------------------------------------- | -------------- | ----------- |
+| `icon`   | --        | Image, svg or emoji that can be used as an icon on the label's left (up to 24px) | `HTML Element` | `undefined` |
+
+---
+
 <!-- Auto Generated Below -->
 
 ## Properties
@@ -124,13 +132,5 @@ firstOption: string;
 | `firstOption` | `first-option` | The first option to be displayed, if it's empty it'll show the first one on options array. | `string`   | `undefined` |
 | `options`     | --             | The options list of the popover.                                                           | `Option[]` | `undefined` |
 | `upwards`     | `upwards`      | Boolean property to set the popover dropdown to be displayed on top of the description.    | `boolean`  | `false`     |
-
-## Slots
-
-| Property | Attribute | Description                                                                      | Type           | Default     |
-| -------- | --------- | -------------------------------------------------------------------------------- | -------------- | ----------- |
-| `icon`   | --        | Image, svg or emoji that can be used as an icon on the label's left (up to 24px) | `HTML Element` | `undefined` |
-
----
 
 _Built with [StencilJS](https://stenciljs.com/)_
